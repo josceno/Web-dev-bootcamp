@@ -10,8 +10,11 @@ public class Desafio {
         List<Object> pessoa = new ArrayList <Object>();
         Desafio desafio = new Desafio();
         String pessoanome = desafio.EscreverMeunome();
-        desafio.verificarIdade(pessoanome, 2);
-        System.out.println("oi "+pessoanome);
+        System.out.println("insira a idade");
+        int idade = Integer.parseInt(desafio.input.nextLine());
+        desafio.verificarIdade(pessoanome, idade);
+        pessoa.add(pessoanome);
+        pessoa.add(idade);
     }
     public String EscreverMeunome(){   
         System.out.println("escreva seu nome");
@@ -21,11 +24,11 @@ public class Desafio {
     public void verificarIdade(String nome, int idade){
         
         if (idade > 18){
-            System.out.println(nome+"tem"+ idade +" e é maior de idade");
+            System.out.println(nome+" tem "+ idade +" e é maior de idade");
         }
         
         if(idade<18){
-            System.out.println("menor de idade");
+            System.out.println(nome+" tem "+ idade +"anos e é menor de idade");
         }
     
     }
